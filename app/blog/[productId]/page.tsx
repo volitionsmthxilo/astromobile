@@ -157,7 +157,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
       {/* SECTION 4: Full Width Carousel (One Image at a Time) */}
       <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
         <img
-          src={product.carouselImages[currentFullCarousel]}
+          src={product.carouselImagestwo[currentFullCarousel]}
           alt={`${product.name} showcase`}
           className="w-full h-full object-cover"
         />

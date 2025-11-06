@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Star, Battery, Camera, Cpu, HardDrive, Smartphone } from "lucide-react"
+import { productsDatabase, getProductById } from '../Database/products'
 import Link from "next/link"
 
 export default function SmartphonesPage() {
@@ -210,6 +211,7 @@ export default function SmartphonesPage() {
                     <Link href={`/blog/${phone.id}`}>
                       <Button className="w-full">Learn More</Button>
                     </Link>
+
                   </div>
                 </CardContent>
               </Card>

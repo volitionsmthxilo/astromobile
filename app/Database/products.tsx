@@ -13,6 +13,15 @@ export const productsDatabase = {
         "/Note3 13Pro.webp",
         "/Note1 13Pro.webp"
       ],
+      carouselImagestwo: [
+        "/note13-a-4.webp",
+        "/note13-a-13.webp",
+        "/note13-a-14.webp",
+        "/note13-b-4.jpg"
+      ],
+
+
+      
       
       phoneType: {
         heading: "Flagship Performance",
@@ -87,26 +96,26 @@ export const productsDatabase = {
     {
       id: 2,
       name: "Astro Energy",
-      bannerImage: "/banners/astro-energy-banner.jpg",
+      bannerImage: "/banner15pro.webp",
       
       carouselImages: [
-        "/carousel/energy-1.jpg",
-        "/carousel/energy-2.jpg",
-        "/carousel/energy-3.jpg",
-        "/carousel/energy-4.jpg"
+        "/Note15_newest.png",
+        "/Note15Pro_Newest.jpg.png",
+        "/note 15 pr09.webp",
+        "/Note2 15pro.webp"
       ],
       
       phoneType: {
         heading: "Unstoppable Battery Life",
         description: "The Astro Energy lives up to its name with a massive 6000mAh battery that lasts 2-3 days on a single charge.",
-        typeImage: "/types/battery-type.jpg"
+        typeImage: "/note15pro.webp"
       },
       
       carouselImages2: [
-        "/carousel2/energy-detail-1.jpg",
-        "/carousel2/energy-detail-2.jpg",
-        "/carousel2/energy-detail-3.jpg",
-        "/carousel2/energy-detail-4.jpg"
+        "/note 15 pro.webp",
+        "/carosel1.webp",
+        "/carosel2.webp",
+        "/banner15pro.webp"
       ],
       
       featureImage: {
