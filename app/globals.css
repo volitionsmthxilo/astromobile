@@ -115,6 +115,13 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+.mask-gradient {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

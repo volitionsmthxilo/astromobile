@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CreditCard, Shield, Zap, Users, Star, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { useState, useEffect } from "react"
+import LogoLoop from "@/components/LogoLoop";
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -35,6 +36,20 @@ export default function HomePage() {
       description: "Track your fitness, receive notifications, and stay connected without reaching for your phone.",
       image: "/BANNER_1.png",
     },
+  ]
+
+  const partners = [
+    {img:"SPAR.jpeg"},
+    { img:"OKM.jpeg"},
+    { img:"OK.png"},
+    { img:"NASH.png"},
+    {img:"logo3.png"},
+    { img:"INNOVATIVE.jpeg"},
+    {img:"KANGO.png"},
+    { img:"GAIN.jpg"},
+    { img:"BornMarche.jpg"},
+    { img:"BON MARCHE.png"},
+    { img:"BholaHardware.jpeg"}
   ]
 
   useEffect(() => {
@@ -236,9 +251,9 @@ export default function HomePage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              {image:"Note15Pro_Newest.jpg.png", name: "Astro Blaze X", price: "$299", tag: "Flagship" },
-              {image:"R8 Rugged Tablet.png", name: "Astro Energy", price: "$199", tag: "Best Seller" },
-              {image:"watch01.jpg", name: "Astro SmartOne", price: "$129", tag: "Budget" },
+              {image:"Note15Pro_Newest.jpg.png", name: "Note15Pro",  tag: "Flagship " , title: "From $120 or $20.79/mo. for 6 mo." },
+              {image:"TABLETS_PAD_11.jpg", name: "I pad 11", price: "$199", tag: "Best Seller", title: "From $140 or $25.79/mo. for 6 mo." },
+              {image:"watch01.jpg", name: "Pusle spirit 2", price: "$129", tag: "Budget", title: "From $60 or $5.79/mo. for 6 mo." },
             
             ].map((product, i) => (
               <Card key={i} className="group hover:shadow-xl transition-shadow overflow-hidden">
@@ -264,8 +279,8 @@ export default function HomePage() {
                   </div>
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="text-2xl font-bold">{product.price}</div>
-                      <div className="text-xs text-muted-foreground">or $25/month with PAYU</div>
+          
+                      <div className="text-xs text-muted-foreground">{product.title}</div>
                     </div>
                     <Button size="sm">Buy Now</Button>
                   </div>
@@ -337,6 +352,7 @@ export default function HomePage() {
       </section>
 
       {/* Partners Section */}
+       <div className="spiral-divider"></div>
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12">
@@ -345,15 +361,34 @@ export default function HomePage() {
               Working with leading mobile network operators to bring connectivity to millions
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            {["Econet", "MTN", "Airtel", "Safaricom", "NetOne", "TNM", "Vodacom", "Orange"].map((partner, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-center p-6 bg-muted rounded-xl hover:bg-muted/70 transition-colors"
-              >
-                <div className="text-xl font-bold text-muted-foreground">{partner}</div>
-              </div>
-            ))}
+          <div className="w-full">
+
+
+  
+            
+
+
+
+
+
+     
+
+          <LogoLoop
+            logos={partners.map((partner) => ({
+              src: `/${partner.img}`,
+             
+            }))}
+            speed={50}
+            direction="left"
+            logoHeight={60}
+            gap={40}
+            pauseOnHover={true}
+            fadeOut={true}
+          />
+       
+
+
+
           </div>
         </div>
       </section>
