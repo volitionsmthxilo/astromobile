@@ -33,31 +33,31 @@ export default function HomePage() {
       subtitle: "Smartphones Built for Africa",
       description:
         "Affordable innovation, reliable performance, and flexible ownership through retail and Pay-As-You-Use options.",
-      image: "/BANNER_2.png",
+      image: "/bannerimag3.png",
     },
     {
       type: "Tablet",
       title: "Productivity Unleashed",
       subtitle: "Tablets for Work & Play",
       description: "Perfect for education, entertainment, and professional work. Large screens, powerful performance.",
-      image: "/BANNER_3.png",
+      image: "/twoastromobile.jpg",
     },
     {
       type: "Smartwatch",
       title: "Stay Connected, Stay Healthy",
       subtitle: "Smartwatches for Modern Life",
       description: "Track your fitness, receive notifications, and stay connected without reaching for your phone.",
-      image: "/BANNER_1.png",
+      image: "/threeastromobile.jpg",
     },
   ]
 
   const partners = [
+    { img: "Amazon_Web_Services_Logo.svg.png", country: "Multiple Countries" },
     { img: "285199f4046e1c49ac29f14a1cb4c2a76cd1b.png", country: "Zimbabwe" },
-    { img: "zm-atel-logo.png", country: "Multiple Countries" },
-    // { img: "zm-atel-logo.png", country: "Multiple Countries"  },
+    { img: "zm-atel-logo.png", country: "Multiple Countries"  },
     { img: "digicel.png", country: "Kenya"  },
-    { img: "google.png", country: "Zimbabwe" },
-    { img: "mtn-logo-footer.svg", country: "Malawi"  },
+    { img: "Google_2015_logo.svg.webp", country: "Zimbabwe" },
+    { img: "MTN-Logo.png", country: "Malawi"  },
     { img: "vodacom_africa_business_communities.png", country: "Multiple Countries"  },
     { img: "Zamtel.png", country: "Multiple Countries" }
   ]
@@ -285,8 +285,8 @@ export default function HomePage() {
 
                     <div className="flex flex-col sm:flex-row gap-4 pt-4">
                       <Link href="/products">
-                        <Button size="lg" className="text-base px-8 py-6 text-lg hover:scale-105 transition-transform" style={{ backgroundColor: '#8FC240' }}>
-                          Shop Now
+                        <Button size="lg" className="text-[14px] px-20 py-5 hover:scale-105 rounded-full transition-transform" style={{ backgroundColor: '#8FC240' }}>
+                        Find a Dealer
                           <ArrowRight className="ml-2 w-5 h-5" />
                         </Button>
                       </Link>
@@ -294,7 +294,7 @@ export default function HomePage() {
                         <Button
                           size="lg"
                           variant="outline"
-                          className="text-base px-8 py-6 text-lg bg-white/10 backdrop-blur-sm text-white border-white/30 hover:bg-white/20 hover:scale-105 transition-transform"
+                          className="text-[14px] px-4 py-1 rounded-full  bg-white/10 backdrop-blur-sm text-white border-[#8FC240] hover:bg-white/20 hover:scale-105 transition-transform"
                         >
                           Learn About PAYU
                         </Button>
@@ -323,7 +323,7 @@ export default function HomePage() {
             </div>
           ))}
 
-          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-6 z-20">
+          <div className="absolute bottom-12 right-[1px] mb-5 -translate-x-1/2 flex items-center gap-6 z-20">
             <button
               onClick={prevSlide}
               className="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/30 flex items-center justify-center hover:bg-white/30 hover:scale-110 transition-all duration-300 shadow-lg text-white"
@@ -360,7 +360,7 @@ export default function HomePage() {
       <section ref={featuresRef} className="py-16 md:py-24 bg-muted/30 relative z-10">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Why Choose AstroMobile?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">Why Go Astro?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
               We're committed to making technology accessible to everyone across Africa
             </p>
@@ -371,20 +371,20 @@ export default function HomePage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center hover:rotate-12 transition-transform" style={{ backgroundColor: '#8FC240' + '1A' }}>
                   <CreditCard className="w-6 h-6" style={{ color: '#8FC240' }} />
                 </div>
-                <h3 className="font-semibold text-lg">Flexible Payment</h3>
+                <h3 className="font-semibold text-lg">Designed for African life</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Pay-As-You-Use model makes smartphones affordable for everyone
+                rugged, reliable, and affordable.
                 </p>
               </CardContent>
             </Card>
             <Card className="feature-card border-2 transition-all hover:shadow-2xl hover:-translate-y-2" style={{ borderColor: '#8FC240' }}>
               <CardContent className="pt-6 space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center hover:rotate-12 transition-transform">
-                  <Shield className="w-6 h-6 text-accent" />
+ <div className="w-12 h-12 rounded-xl flex items-center justify-center hover:rotate-12 transition-transform" style={{ backgroundColor: '#8FC240' + '1A' }}>
+                  <Shield className="w-6 h-6 text-accent" style={{ color: '#8FC240' }} />
                 </div>
-                <h3 className="font-semibold text-lg">Reliable Quality</h3>
+                <h3 className="font-semibold text-lg">Smart Pay Options</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Durable devices built to withstand African conditions
+                  own your device through daily credits.
                 </p>
               </CardContent>
             </Card>
@@ -393,21 +393,20 @@ export default function HomePage() {
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center hover:rotate-12 transition-transform" style={{ backgroundColor: '#8FC240' + '1A' }}>
                   <Zap className="w-6 h-6" style={{ color: '#8FC240' }} />
                 </div>
-                <h3 className="font-semibold text-lg">Fast Performance</h3>
+                <h3 className="font-semibold text-lg">Long-lasting batteries</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Powerful processors for smooth multitasking and gaming
+                 for the long days and long nights.
                 </p>
               </CardContent>
             </Card>
             <Card className="feature-card border-2 transition-all hover:shadow-2xl hover:-translate-y-2" style={{ borderColor: '#8FC240' }}>
               <CardContent className="pt-6 space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center hover:rotate-12 transition-transform">
-                  <Users className="w-6 h-6 text-accent" />
+ <div className="w-12 h-12 rounded-xl flex items-center justify-center hover:rotate-12 transition-transform" style={{ backgroundColor: '#8FC240' + '1A' }}>
+                  <Users className="w-6 h-6 text-accent" style={{ color: '#8FC240' }} />
                 </div>
-                <h3 className="font-semibold text-lg">Local Support</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Dedicated customer service across all our markets
-                </p>
+                <h3 className="font-semibold text-lg">Local support</h3>
+                
+                <p className="text-sm text-muted-foreground leading-relaxed">Trusted by over 5,000,000 users with offices across Africa.</p>
               </CardContent>
             </Card>
           </div>
@@ -431,9 +430,9 @@ export default function HomePage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              {image:"Note15Pro_Newest.jpg.png", name: "Note 15 pro", tag: "Flagship", title: "From $20us + usage top ups"},
-              {image:"TABLETS_PAD_11.jpg", name: "Ipad 11", tag: "Best Seller", title: "From $30us + usage top ups"},
-              {image:"watch01.jpg", name: "Pulse Single", tag: "Budget", title: "From $10us + usage top ups"},
+              {image:"Note15Pro_Newest.jpg.png", name: "Astro Vibe", tag: "Bugdet Range", title: "From $20us + usage top ups"},
+              {image:"TABLETS_PAD_11.jpg", name: "Astro Nova", tag: "Middle Range", title: "From $30us + usage top ups"},
+              {image:"watch01.jpg", name: "Astro Prime", tag: "Top Range", title: "From $10us + usage top ups"},
             ].map((product, i) => (
               <Card key={i} className="product-card group hover:shadow-2xl transition-all overflow-hidden hover:-translate-y-1">
                 <div className="relative aspect-square bg-gradient-to-br from-muted to-muted/50 overflow-hidden">
@@ -441,10 +440,10 @@ export default function HomePage() {
                   <img
                     src={`/${product.image}`}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-110 group-hover:rotate-1 transition-all duration-500"
+                    className="w-full h-full object-cover group-hover:scale-101 group-hover:rotate-1 transition-all duration-500"
                   />
                 </div>
-                <CardContent className="p-6 space-y-4">
+                <CardContent className="p-4">
                   <div>
                     <h3 className="font-semibold text-xl mb-1">{product.name}</h3>
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
@@ -460,7 +459,7 @@ export default function HomePage() {
                     <div>
                       <div className="text-[14px] text-muted-foreground">{product.title}</div>
                     </div>
-                    <Button size="sm" className="hover:scale-105 transition-transform" style={{ backgroundColor: '#8FC240' }}>Buy Now</Button>
+                    {/* <Button size="sm" className="hover:scale-105 transition-transform" style={{ backgroundColor: '#8FC240' }}>Buy Now</Button> */}
                   </div>
                 </CardContent>
               </Card>
@@ -478,11 +477,13 @@ export default function HomePage() {
                 Pay-As-You-Use
               </Badge>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-balance">
-                Own Your Smartphone, One Payment at a Time
+             Pay the Smart Way – Own It on Your Terms.
+
               </h2>
               <p className="text-lg text-primary-foreground/90 leading-relaxed text-pretty">
-                Our flexible PAYU model makes it easy to own a smartphone without the upfront cost. Make affordable
-                payments via mobile money and unlock full ownership.
+                Astro Mobile lets you get your dream phone today and pay as you use it.
+No debt. No pressure. Just top up through M-Pesa and stay connected.
+
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-3 hover:translate-x-2 transition-transform">
@@ -490,8 +491,8 @@ export default function HomePage() {
                     <span className="font-bold">1</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Choose Your Device</h4>
-                    <p className="text-sm text-primary-foreground/80">Select from our range of smartphones</p>
+                    <h4 className="font-semibold mb-1">Pick Your Astro</h4>
+                    <p className="text-sm text-primary-foreground/80">Choose your favorite model.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 hover:translate-x-2 transition-transform">
@@ -499,21 +500,21 @@ export default function HomePage() {
                     <span className="font-bold">2</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Get Connected</h4>
-                    <p className="text-sm text-primary-foreground/80">Activate with our MNO partners</p>
+                    <h4 className="font-semibold mb-1"> Activate Instantly</h4>
+                    <p className="text-sm text-primary-foreground/80">Make your first token payment via M-Pesa.</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 hover:translate-x-2 transition-transform">
-                  <div className="w-8 h-8 rounded-full bg-primary-foreground/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-full  flex items-center justify-center flex-shrink-0 mt-0.5">
                     <span className="font-bold">3</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Make Flexible Payments</h4>
-                    <p className="text-sm text-primary-foreground/80">Pay via mobile money at your own pace</p>
+                    <h4 className="font-semibold mb-1"> Top Up Anytime</h4>
+                    <p className="text-sm text-primary-foreground/80">Buy usage tokens whenever you need them.</p>
                   </div>
                 </div>
               </div>
-              <Button size="lg" variant="secondary" className="mt-4 hover:scale-105 transition-transform">
+              <Button  className="mt-4 border bg-white text-[#8FC240] rounded-full font-sm border-white  transition-transform">
                 Learn More About PAYU
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
@@ -533,15 +534,20 @@ export default function HomePage() {
       <section ref={partnersRef} className="py-16 md:py-24 relative z-10">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">    Trusted by our customers & partners</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">   Let’s Grow Africa Together</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Working with Africa's leading mobile network operators
+ 
+
+
+             Partner with us to build the future of technology across the continent.
+
+
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {partners.map((partner, i) => (
               <Card key={i} className="partner-card group hover:shadow-xl transition-all" style={{ borderColor: '#8FC240' }}>
-                <CardContent className="p-8 text-center space-y-4">
+                <CardContent className=" text-center ">
                   <div className="w-30 h-16 rounded-xl text-primary-foreground flex items-center justify-center mx-auto text-2xl font-bold group-hover:scale-110 transition-transform"  >
                     {/* {partner.logo} */}
                     {<img src={`/${partner.img}`} alt={partner.country} className="max-w-full max-h-full object-cover" /> }
@@ -607,24 +613,31 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 relative z-10">
-        <div className="container mx-auto px-4 lg:px-8">
-          <Card className="border-2 bg-gradient-to-br from-card hover:shadow-2xl transition-shadow" style={{ borderColor: '#8FC240' + '33', background: 'linear-gradient(to bottom right, var(--card), #8FC240' + '0D)' }}>
+      <section className=" flex items-center justify-center  h-[450px] z-10  relative">
+
+ <img  src="/last-sectionbanner.jpg" 
+            className="w-full  object-cover h-full  relative"
+            
+            />
+
+        <div className="container mx-auto px-4 lg:px-8  absolute ">
+          <Card className="border-2  from-card hover:shadow-2xl transition-shadow" style={{ borderColor: '#8FC240' + '80', background: 'linear-gradient(to bottom right, var(--card), #8FC240' + '8D)' }}>
+           
             <CardContent className="p-8 md:p-12 text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-balance">Join the AstroMobile Revolution</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+              <p className="text-lg  max-w-2xl mx-auto text-pretty ">
                 Whether you're looking to buy, partner with us, or become a distributor, we're here to help you connect
                 with Africa's future.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                 <Link href="/products">
-                  <Button size="lg" className="hover:scale-105 transition-transform" style={{ backgroundColor: '#8FC240' }}>
+                  <Button  className="hover:scale-105 transition-transform  rounded-full text-sm " style={{ backgroundColor: '#8FC240' }}>
                     Shop Products
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
                 <Link href="/partner">
-                  <Button size="lg" variant="outline" className="hover:scale-105 transition-transform">
+                  <Button  variant="outline" className="hover:scale-105 text-sm rounded-full border border-[#8FC240] transition-transform">
                     Become a Partner
                   </Button>
                 </Link>
