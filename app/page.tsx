@@ -365,7 +365,7 @@ export default function HomePage() {
     {/* Side Arrows - ONLY FOR SM and MD */}
     <button
       onClick={prevSlide}
-      className="lg:hidden absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20  border-2 border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-300 shadow-lg text-white z-20"
+      className="lg:hidden absolute left-[1px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full   border-2 border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-300 shadow-lg text-white z-20"
       aria-label="Previous slide"
     >
       <ChevronLeft className="w-5 h-5" />
@@ -373,7 +373,7 @@ export default function HomePage() {
 
     <button
       onClick={nextSlide}
-      className="lg:hidden absolute right-1 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20  border-2 border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-300 shadow-lg text-white z-20"
+      className="lg:hidden absolute right-[1px] top-1/2 -translate-y-1/2 w-10 h-10 rounded-full   border-2 border-white/30 flex items-center justify-center hover:bg-white/30 transition-all duration-300 shadow-lg text-white z-20"
       aria-label="Next slide"
     >
       <ChevronRight className="w-5 h-5" />
