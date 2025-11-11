@@ -541,7 +541,7 @@ No debt. No pressure. Just top up through M-Pesa and stay connected.
               <img
                 src="/phone screen set.png"
                 alt="PAYU Model"
-                className="w-full h-[650px] object-contain relative bottom-[-28px] md:bottom-[-96px] "
+                className="w-full h-[595px] object-contain relative  bottom-[-1px]  md:bottom-[-96px] "
               />
            
           </div>
