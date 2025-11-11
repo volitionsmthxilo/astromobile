@@ -14,6 +14,7 @@ export default function ProductsPage() {
   const countriesRef = useRef(null)
 
  const countries = [
+   { name: 'Kenya', flag: '🇰🇪', code: 'KE' },
     { name: 'Angola', flag: '🇦🇴', code: 'AO' },
     { name: 'Botswana', flag: '🇧🇼', code: 'BW' },
     { name: 'DRC Congo', flag: '🇨🇩', code: 'CD' },
@@ -68,7 +69,7 @@ export default function ProductsPage() {
             src="/about-us-one.png"
             alt="Background"
             fill
-            className="object-cover "
+            className="object-cover"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/60" />
