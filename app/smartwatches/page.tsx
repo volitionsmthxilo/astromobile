@@ -132,12 +132,12 @@ export default function SmartwatchesPage() {
       <main className="pt-24 pb-16 relative z-10">
         <div className="container mx-auto px-4 lg:px-8">
           {/* Header */}
-          <div ref={headerRef} className="mb-12 header-content">
+          <div ref={headerRef} className="mb-12 header-content flex justify-center flex-col w-full items-center ">
             <div className="flex items-center gap-3 mb-4">
               <Watch className="w-8 h-8" style={{ color: '#8FC240' }} />
               <h1 className="text-4xl md:text-5xl font-bold">Smartwatches</h1>
             </div>
-            <p className="text-lg text-muted-foreground max-w-2xl">
+            <p className="text-lg text-muted-foreground max-w-2xl text-center">
               Stay connected and track your health with our smartwatch collection. From premium health tracking to
               essential fitness features.
             </p>

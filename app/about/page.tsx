@@ -44,6 +44,8 @@ export default function AboutPage() {
       {img:"partnership.jpg", headline:"Partners & Employees:", des:"You are joining a purpose-driven company that transforms challenging origins into continental-scale solutions. You will be part of a high-impact culture that is truly empowering financial inclusion for everyone in Africa."},
     ]
 
+  
+
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
     }

@@ -20,12 +20,15 @@ export default function SmartphonesPage() {
   const productsRef = useRef(null)
 
   const smartphones = [
+
+
+
     {
-      id: "astro-blaze-x",
+      id: "astro-vibe",
       name: "Astro Vibe",
       tagline: "From $20us + usage top ups",
-      image: "/Note13Max_Newest.png",
-      img:"/logo3.png",
+      image: "/astro note 15 pro.png",
+      img:"/pnote 15 pro -0bg.png",
       price:"160",
       title:"From $20us + usage top ups",
       specs: {
@@ -39,10 +42,10 @@ export default function SmartphonesPage() {
       },
     },
     {
-      id: "astro-energy",
+      id: "astro-nova",
       name: "Astro Nova",
       tagline: "From $20us + usage top ups",
-      image: "/Note15_newest.png",
+      image: "/astro note 13 max.png",
       title:"From $20us + usage top ups",
      img:"/logo3.png",
       price:"250",
@@ -57,11 +60,11 @@ export default function SmartphonesPage() {
       },
     },
     {
-      id: "astro-smartone",
+      id: "astro-prime",
       name: "Astro Prime",
       tagline: "From $20us + usage top ups",
       payuPrice: "$12/month",
-      image: "/Note15Pro_Newest.jpg.png",
+      image: "/astro note 16 pro.png",
       title:"From $20us + usage top ups",
      img:"/logo3.png",
       price:"180",
@@ -144,11 +147,11 @@ export default function SmartphonesPage() {
           <div ref={productsRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {smartphones.map((phone) => (
               <Card key={phone.id} className="product-card group hover:shadow-xl transition-shadow overflow-hidden">
-                <div className="relative aspect-square bg-gradient-to-br from-muted to-muted/50 overflow-hidden">
+                <div className="relative aspect-square  from-muted to-muted/50 overflow-hidden">
                   <img
                     src={phone.image || "/placeholder.svg"}
                     alt={phone.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-[320px] object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <CardContent className="px-6 py-2 space-y-2">

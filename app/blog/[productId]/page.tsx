@@ -20,6 +20,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
   const [currentCarousel2, setCurrentCarousel2] = useState(0)
   const [currentFullCarousel, setCurrentFullCarousel] = useState(0)
 
+  const product = getProductById('smartphones', productId) || getProductById('smartphones', 'astro-vibe')
+
   const heroRef = useRef(null)
   const highlightsRef = useRef(null)
   const carousel1Ref = useRef(null)
@@ -32,7 +34,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
   const ctaRef = useRef(null)
 
   // Get product from database
-  const product = getProductById('smartphones', parseInt(productId)) || getProductById('smartphones', 1)
+  // const product = getProductById('smartphones', parseInt(productId)) || getProductById('smartphones', 1)
 
   if (!product) {
     return <div>Product not found</div>
@@ -262,16 +264,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
         <div className="absolute flex justify-start flex-col items-center top-0 left-0 right-0 p-8 md:p-12 lg:p-8 text-white hero-content">
           <Badge className="mb-4 bg-primary/80 bg-[#8FC240]">New Release</Badge>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-4">{product.name}</h1>
-          <p className="text-xl md:text-[16px] mb-6 text-gray">{product.phoneType.description}</p>
-
-          <div className="flex cursor-pointer gap-2 items-center"></div>
-          <div className="text-lg gap-2 cursor-pointer flex items-center justify-between px-4">
-            <img
-              src="/OCTO_ASTRO_FLIERS_2.png"
-              className="h-[30px] object-cover"
-            />
-            <p className="text-white text-[22px] font-bold">$190</p>
-          </div>
+          
         </div>
       </section>
 

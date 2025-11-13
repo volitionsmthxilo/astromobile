@@ -455,9 +455,9 @@ export default function HomePage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              {image:"Note15Pro_Newest.jpg.png", name: "Astro Vibe", tag: "Bugdet Range", title: "From $20us + usage top ups"},
-              {image:"TABLETS_PAD_11.jpg", name: "Astro Nova", tag: "Middle Range", title: "From $30us + usage top ups"},
-              {image:"watch01.jpg", name: "Astro Prime", tag: "Top Range", title: "From $10us + usage top ups"},
+              {image:"astro note 15 pro.png", name: "Astro Vibe", tag: "Bugdet Range", title: "From $20us + usage top ups"},
+              {image:"astro note 13 max.png", name: "Astro Nova", tag: "Middle Range", title: "From $30us + usage top ups"},
+              {image:"astro note 16 pro.png", name: "Astro Prime", tag: "Top Range", title: "From $10us + usage top ups"},
             ].map((product, i) => (
               <Card key={i} className="product-card group hover:shadow-2xl transition-all overflow-hidden hover:-translate-y-1">
                 <div className="relative aspect-square bg-gradient-to-br from-muted to-muted/50 overflow-hidden">
@@ -465,7 +465,7 @@ export default function HomePage() {
                   <img
                     src={`/${product.image}`}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-101 group-hover:rotate-1 transition-all duration-500"
+                    className="w-full  object-contain h-[380px] group-hover:scale-101 group-hover:rotate-1 transition-all duration-500"
                   />
                 </div>
                 <CardContent className="p-4">
