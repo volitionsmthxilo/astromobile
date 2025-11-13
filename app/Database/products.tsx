@@ -14,10 +14,6 @@ export const productsDatabase = {
       
       carouselImages: [
 
-
-
-
-
         "/Note5 13Pro.webp",
         "note15-product-7-496369.webp ",
         "/note15-product-3-544296.webp",
@@ -34,7 +30,7 @@ export const productsDatabase = {
       phoneType: {
         heading: "Flagship Performance",
         description: "16GB RAM + 256GB ROM | 50MP Rear Camera | 90Hz Refresh Rate | UNISOC T606 CPU Mode",
-        typeImage: "/note13-a-4.webp"
+        typeImage: "/note15pro.jpg"
       },
       
       carouselImages2: [
