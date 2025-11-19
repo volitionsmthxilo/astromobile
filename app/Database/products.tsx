@@ -118,13 +118,13 @@ export const productsDatabase = {
       img: "/logo3.png",
       price: "250",
       title: "From $20us + usage top ups",
-      bannerImage: "/note15-banneroo1.webp",
+      bannerImage: "/Astro Mobile.png",
       
       carouselImages: [
        "/astro-vibe1.webp ",
         "/astro-vibe2.webp",
         "/astro-vibe3.webp",
-        "/note15-product-2-693153.webp"
+        "/Astro Mobile_2.png"
       ],
       
 
