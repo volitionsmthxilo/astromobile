@@ -10,7 +10,7 @@ export const productsDatabase = {
       img: "/pnote 15 pro -0bg.png",
       price: "160",
       title: "From $20us + usage top ups",
-      bannerImage: "/5-001banner.webp",
+      bannerImage: "/Astro Mobile_4.png",
       
       carouselImages: [
 
@@ -20,8 +20,8 @@ export const productsDatabase = {
         "/15proo0004.webp"
       ],
       carouselImagestwo: [
-        "/carosel1.webp",
-        "/carouselpro.jpg",
+        "/Astro Mobile_3.png",
+        "/Astro Mobile_1.png",
         "/carosel3.webp",
         "/carosel2.webp"
       ],
