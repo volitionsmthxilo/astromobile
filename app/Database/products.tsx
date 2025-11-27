@@ -20,7 +20,7 @@ export const productsDatabase = {
 
         "/Note5 13Pro.webp",
         "/Note2 15pro.webp",
-        "/8.png",
+        "/astronova1004.png",
         "/15proo0004.webp"
       ],
       carouselImagestwo: [
@@ -81,7 +81,34 @@ export const productsDatabase = {
               "Lightweight 223g construction"
             ]
           }
-        ]
+        ],
+        technical: [
+          {
+            title: "Hardware Specifications",
+            details: [
+              "Advanced Octa-core AI Chipset",
+              "Up to 12GB RAM/128GB ROM",
+              "Side-mounted fingerprint sensor",
+              "Dual Nano SIM + GPS/GLONASS/Galileo"
+            ]
+          },
+          {
+            title: "Camera Specifications",
+            details: [
+              "13MP rear camera system",
+              " 5MP front-facing camera",
+              "AI-powered photography modes"
+            ]
+          },
+          {
+            title: "Software Specifications (android 14)",
+            details: [
+              "Android 14 operating system",
+              "Seamless multitasking",
+              "Premium user experience"
+            ]
+          }
+        ],
       },
       
       imageExplanations: [
@@ -132,18 +159,18 @@ export const productsDatabase = {
       carouselImages: [
         "/astro-vibe1.webp ",
         "/astro-vibe2.webp",
-        "/astro-vibe3.webp",
-        "/Astro Mobile_2.png"
+        "/astrovibe003.png",
+        "/astrovibe002.png"
       ],
       
 
 
 
       carouselImagestwo: [   
-        "/Astro Mobile-Banners_2.-.jpg",
+        "/3.png",
         "/note15-pic1-1.webp",
         "/note15-color1.webp",
-        "/Astro Mobile-Banners_1.-.jpg"
+        "/223.png"
       ],
       
       phoneType: {
@@ -197,7 +224,33 @@ export const productsDatabase = {
               "Sleek, pocket-friendly design"
             ]
           }
-        ]
+        ],
+        technical: [
+          {
+            title: "Hardware Specifications",
+            details: [
+              "Powerful Octa-core AI Chipset",
+              "(4+4) GB expandable RAM/64GB storage",
+              "6.6 HD+ vibrant display"
+            ]
+          },
+          {
+            title: "Camera Specifications",
+            details: [
+              "13MP main camera with AI enhancement",
+              "5MP front camera for crisp selfies",
+              "Advanced photo processing"
+            ]
+          },
+          {
+            title: "Software Specifications (android 14)",
+            details: [
+              "Latest Android 14 OS",
+              "Smooth, intuitive interface",
+              "Enhanced security features"
+            ]
+          }
+        ],
       },
       
       imageExplanations: [
@@ -228,16 +281,16 @@ export const productsDatabase = {
       img: "/logo3.png",
       price: "180",
       title: "From $20us + usage top ups",
-      bannerImage: "/1_01.webp",
+      bannerImage: "/1.png",
       
       carouselImages: [
 
         
 
-        "/astro-prime003.webp",
+        "/astroprime008.png",
         "/astro-prime01.webp",
-      "/13.png",
-        "/12.png"
+      "/astroprime006.png",
+        "/astroprime001.png"
       ],
       
       carouselImagestwo: [
@@ -301,7 +354,34 @@ export const productsDatabase = {
               "Portable 223g lightweight feel"
             ]
           }
-        ]
+        ],
+         technical: [
+          {
+            title: "Hardware Specifications",
+            details: [
+              "UNISOC T606 Octa-core processor",
+              "(6+10) GB expandable RAM + 256GB storage",
+              " Bluetooth 5.0 connectivity",
+              "  Dual Nano SIM support"
+            ]
+          },
+          {
+            title: "Camera Specifications",
+            details: [
+              "Professional 48MP main camera",
+              "16MP high-resolution front camera",
+              "Multi-scenario AI imaging"
+            ]
+          },
+          {
+            title: "Software Specifications (android 14)",
+            details: [
+              "Android 14 platform",
+              "Optimized performance",
+              "Smart AI assistance"
+            ]
+          }
+        ],
       },
       
       imageExplanations: [
@@ -334,7 +414,7 @@ export const productsDatabase = {
       tagline: "Professional tablet for work and play",
       image: "/tablets/tab-pro.jpg",
       price: "399",
-      bannerImage: "/3.png",
+      bannerImage: "/Pad11-banner-web.webp",
       
       
       carouselImages: [
@@ -346,9 +426,9 @@ export const productsDatabase = {
 // public/Pad11-product-4-170360.webp
 // Pad11-product-2-187318.webp
 
-        "/2.png",
+        "/15ipad11.png",
         "/Pad11-product-2-187318.webp",
-        "/TABLETS_PAD_11.jpg ",
+        "/12ipad11.png ",
         "/Pad11-product-6-458438.webp"
       ],
       
@@ -411,7 +491,35 @@ export const productsDatabase = {
               "Premium 11 2K display experience"
             ]
           },
-        ]
+        ],
+        technical: [
+          {
+            title: "Hardware Specifications",
+            details: [
+              "UNISOC T606 Octa-core powerhouse",
+              " (6+6) GB RAM + 256GB ROM (expandable to 1TB)",
+              "Quad-loudspeaker audio system",
+              "Military-grade durability (IP68/IP69K/MIL-STD-810H)",
+            ]
+          },
+          {
+            title: "Camera Specifications",
+            details: [
+              " 16MP main camera with 0.08MP auxiliary lens",
+              "8MP front camera",
+              "1080p Full HD video recording",
+              "Stylus pen compatible",
+            ]
+          },
+          {
+            title: "Software Specifications (android 14)",
+            details: [
+              "Rugged tablet optimization",
+              " Water & dust resistant software protection",
+              "Professional-grade productivity tools"
+            ]
+          },
+        ],
       },
       
       imageExplanations: [
@@ -442,9 +550,9 @@ export const productsDatabase = {
       bannerImage: "/landining page 08.webp",
       
       carouselImages: [
-        "/1.png",
-        "/6.png",
-        "/5.png",
+        "/1900.png",
+        "/11234.png",
+        "/14.png",
         "/4.png"
       ],
       
@@ -506,7 +614,34 @@ export const productsDatabase = {
               "Stunning 10.4 2K Full-View display"
             ]
           },
-        ]
+        ],
+        technical: [
+          {
+            title: "Hardware Specifications",
+            details: [
+              "Octa-core UNISOC T606 (2×A75 1.6GHz + 6×A55 1.6GHz)",
+              "8GB RAM expandable to 16GB + 256GB storage (up to 1TB expansion)",
+              " Dual 4G SIM with LTE Global Network",
+              " 10.4 FHD 2K Full-View Display",
+            ]
+          },
+          {
+            title: "Camera Specifications",
+            details: [
+              "13MP main camera",
+              "5MP front camera",
+              "Versatile photography modes"
+            ]
+          },
+          {
+            title: "Software Specifications (android 14)",
+            details: [
+              "Android 13 OS",
+              "Enhanced multitasking capabilities",
+              "Global connectivity support"
+            ]
+          },
+        ],
       },
       
       imageExplanations: [

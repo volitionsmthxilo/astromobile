@@ -465,8 +465,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
                 Complete camera system details for {product.name}
               </p>
             </div>
-            <div className="grid md:grid-cols-3 gap-6">
-              {product.specs.camera.map((cam: any, index: number) => (
+            <div className="grid md:grid-cols-3 gap-6"> 
+              {product.specs.technical.map((cam: any, index: number) => (
                 <Card key={index} className="spec-card hover:shadow-xl transition-all border-2 hover:-translate-y-2" style={{ borderColor: '#8FC240' }}>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-3 text-[#8FC240]">{cam.title}</h3>

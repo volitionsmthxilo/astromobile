@@ -34,8 +34,8 @@ export default function SmartphonesPage() {
 
      
       tagline: "From $10us + usage top ups",
-      image: "/astro note 15.png",
-      img:"/pnote 15 pro -0bg.png",
+      image: "/astrovibe06.png",
+      img:"/astrovibe06.png",
       price:"160",
       title:"From $10us + usage top ups",
       specs: {
@@ -54,10 +54,10 @@ export default function SmartphonesPage() {
       name: "Astro Nova",
       
       tagline: "From $20us + usage top ups",
-      image: "/astro note 15 pro.png",
+      image: "/astronova001.png",
       
       title:"From $20us + usage top ups",
-     img:"/logo3.png",
+     img:"/astronova001.png",
       price:"250",
       specs: {
         display: '6.5" IPS LCD',
