@@ -483,25 +483,27 @@ export const productsDatabase = {
         features: ["Dual Speakers", "Expandable Storage", "Kids Mode"],
         camera: [
           {
-            title: "8MP Rear Camera",
+            title: "Camera",
             details: [
-              "1080p video",
-              "Auto-focus",
-              "HDR mode"
+              "13MP main camera excellence",
+              "5MP front-facing camera",
+              " High-quality photo capture"
             ]
           },
           {
-            title: "5MP Front Camera",
+            title: "Battery Capacity",
             details: [
-              "720p video calls",
-              "Portrait mode"
+              "7500mAh extended power",
+              "All-day productivity",
+              "Consistent performance"
             ]
           },
           {
-            title: "5MP Front Camera",
+            title: "Aesthetics",
             details: [
-              "720p video calls",
-              "Portrait mode"
+              "Razor-thin 7.7mm profile",
+              "Comfortable 470g weight",
+              "Stunning 10.4 2K Full-View display"
             ]
           },
         ]
