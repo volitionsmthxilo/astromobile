@@ -58,27 +58,27 @@ export const productsDatabase = {
         features: ["5G Ready", "Fast Charging", "Dual SIM", "Face Unlock", "Fingerprint Sensor"],
         camera: [
           {
-            title: "48MP Fusion Main Camera",
+            title: "Camera",
             details: [
-              "24/48 mm focal length (1x/2x)",
-              "ƒ/1.78 aperture",
-              "2.44 μm quad-pixel (1.22 μm individual)"
+              "13MP dual camera system",
+              "5MP front camera for stunning selfies",
+              "AI-powered image optimization"
             ]
           },
           {
-            title: "12MP Ultra Wide Camera",
+            title: "Battery",
             details: [
-              "13 mm focal length (.5x/macro)",
-              "ƒ/2.2 aperture",
-              "1.4 μm quad-pixel (0.7 μm individual)"
+              "Massive 5160mAh capacity",
+              " Power through your entire day",
+              "Reliable energy performance"
             ]
           },
           {
-            title: "8MP Telephoto Camera",
+            title: "Aesthetics",
             details: [
-              "100/200 mm focal length (4x/8x)",
-              "ƒ/2.8 aperture",
-              "1.4 μm quad-pixel (0.7 μm individual)"
+              "Premium ultra-thin bezel design",
+              "Sophisticated 8.9mm slim body",
+              "Lightweight 223g construction"
             ]
           }
         ]
@@ -174,27 +174,27 @@ export const productsDatabase = {
         features: ["Long Battery Life", "Fast Charging", "Dual SIM", "Face Unlock"],
         camera: [
           {
-            title: "32MP Main Camera",
+            title: "Camera",
             details: [
-              "26 mm focal length",
-              "ƒ/1.8 aperture",
-              "1.6 μm pixel size"
+              "13MP main + 5MP front for crystal-clear shots",
+              "AI-enhanced photography",
+              "Capture every moment in vivid detail"
             ]
           },
           {
-            title: "8MP Ultra Wide Camera",
+            title: "Battery Capacity",
             details: [
-              "16 mm focal length",
-              "ƒ/2.4 aperture",
-              "1.2 μm pixel size"
+              "5160mAh all-day power",
+              "Extended usage without compromise",
+              "Stay connected longer"
             ]
           },
           {
-            title: "5MP Front Camera",
+            title: "Aesthetics",
             details: [
-              "Wide angle selfies",
-              "Portrait mode",
-              "Beauty enhancement"
+              "Featherlight at 220g",
+              "Ultra-slim 8.9mm profile",
+              "Sleek, pocket-friendly design"
             ]
           }
         ]
@@ -278,27 +278,27 @@ export const productsDatabase = {
         features: ["Dual SIM", "Face Unlock", "Expandable Storage"],
         camera: [
           {
-            title: "16MP Main Camera",
+            title: "Camera",
             details: [
-              "26 mm focal length",
-              "ƒ/2.0 aperture",
-              "Auto-focus enabled"
+              "Professional 48MP main camera",
+              "16MP front camera for flawless selfies",
+              "Advanced imaging technology"
             ]
           },
           {
-            title: "5MP Front Camera",
+            title: "Battery Capacity",
             details: [
-              "Wide angle selfies",
-              "Portrait mode",
-              "Beauty mode"
+              "Robust 5160mAh powerhouse",
+              "Uninterrupted performance",
+              "Long-lasting reliability"
             ]
           },
           {
-            title: "AI Enhancement",
+            title: "Aesthetics",
             details: [
-              "Scene detection",
-              "HDR mode",
-              "Night mode"
+              "Expansive 6.8 immersive display",
+              "Sleek 9.2mm thin profile",
+              "Portable 223g lightweight feel"
             ]
           }
         ]
@@ -388,27 +388,27 @@ export const productsDatabase = {
         features: ["Stylus Support", "Keyboard Compatible", "Quad Speakers", "Face Unlock"],
         camera: [
           {
-            title: "13MP Rear Camera",
+            title: "Camera",
             details: [
-              "4K video recording",
-              "Auto-focus",
-              "LED flash"
+              "16MP main camera clarity",
+              "8MP front camera perfection",
+              "1080p video recording capability"
+            ]
+          },
+          {
+            title: "Battery Capacity",
+            details: [
+              "Exceptional 8000mAh capacity",
+              "800hrs standby, 40hrs calling",
+              "65 hours continuous music playback"
             ]
           },
           {
             title: "8MP Front Camera",
             details: [
-              "1080p video calls",
-              "Wide angle",
-              "Face unlock"
-            ]
-          },
-          {
-            title: "8MP Front Camera",
-            details: [
-              "1080p video calls",
-              "Wide angle",
-              "Face unlock"
+              "Ultra-thin 7.6mm engineering marvel",
+              " Remarkably light at 616g",
+              "Premium 11 2K display experience"
             ]
           },
         ]
