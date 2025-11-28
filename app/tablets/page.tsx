@@ -4,6 +4,7 @@
 
 "use client"
 
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -24,8 +25,8 @@ export default function TabletsPage() {
 
   const tablets = [
     {
-      id: "astro-tab-pro",
-      name: "Astro iPad 11",
+      id: "astro-funbook-a1",
+      name: "Astro Funbook A1",
       tagline: "Professional Productivity",
       image: "/12ipad11.png",
       img: "/12ipad11.png",
@@ -33,8 +34,8 @@ export default function TabletsPage() {
       title: "From $20us + usage top ups",
     },
     {
-      id: "astro-tab-lite",
-      name: "Astro Tab 8",
+      id: "astro-funbook-a2",
+      name: "Astro Funbook A2",
       tagline: "Perfect for Learning",
       image: "/1900.png",
       img: "/1900.png",
@@ -108,12 +109,16 @@ export default function TabletsPage() {
   {tablets.map((tablet) => (
     <Card key={tablet.id} className="group hover:shadow-xl transition-shadow overflow-hidden">
       <div className="relative from-muted to-muted/50 overflow-hidden">
-<img
-  src={tablet.image || "/placeholder.svg"}
-  alt={tablet.name}
-  className="w-full h-[320px] object-contain block group-hover:scale-105 transition-transform duration-300"
-/>
-
+<div className="relative w-full h-[320px]"> {/* container defines height */}
+  <Image
+    src={(tablet.image || "/placeholder.svg").trim()}
+    alt={tablet.name}
+    className="object-contain block group-hover:scale-105 transition-transform duration-300"
+    fill // makes image take full width & height of container
+    loading="lazy"
+    priority={false}
+  />
+</div>
 </div>
 
 

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
@@ -136,11 +137,16 @@ export default function SmartphonesPage() {
                 
                 {/* IMAGE */}
                 <div className="relative overflow-hidden">
-                  <img
-                    src={phone.image || "/placeholder.svg"}
-                    alt={phone.name}
-                    className="w-full h-[320px] object-contain block group-hover:scale-105 transition-transform duration-300"
-                  />
+      <Image
+  src={phone.image || "/placeholder.svg"}
+  alt={phone.name}
+  width={500}
+  height={320}
+  priority 
+  className="w-full h-[320px] object-contain block group-hover:scale-105 transition-transform duration-300"
+/>
+
+
                 </div>
 
                 {/* CONTENT */}

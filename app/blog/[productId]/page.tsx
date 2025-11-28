@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import {Navigation} from "../../../components/navigation"
 import {Footer} from "../../../components/footer"
 import { Button } from "@/components/ui/button"
@@ -267,11 +268,13 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
 
       {/* SECTION 1: Hero Banner with Text Overlay at Bottom */}
       <section ref={heroRef} className="relative h-[30vh] lg:h-[70vh] md:h-[80vh] overflow-hidden mt-16">
-        <img
-          src={product.bannerImage}
-          alt={product.name}
-          className="w-full h-full object-cover"
-        />
+       <Image
+    src={product.bannerImage}
+    alt={product.name}
+    fill
+    className="object-cover"
+    priority 
+  />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         <div className="absolute flex justify-start flex-col items-center top-0 left-0 right-0 p-8 md:p-12 lg:p-8 text-white hero-content">
           <Badge className="mb-4 bg-primary/80 bg-[#8FC240]">New Release</Badge>
@@ -320,11 +323,13 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
             <div className="hidden md:grid md:grid-cols-4 gap-4">
               {product.carouselImages.map((img: string, index: number) => (
                 <div key={index} className="carousel-image  relative aspect-square overflow-hidden rounded-lg">
-                  <img
-                    src={img}
-                    alt={`${product.name} view ${index + 1}`}
-                    className="w-full h-[300px] object-contain hover:scale-110 transition-transform duration-300"
-                  />
+                 <img
+  src={img}
+  alt={`${product.name} view ${index + 1}`}
+  className="w-full h-[300px] object-contain hover:scale-110 transition-transform duration-300"
+  loading="lazy" 
+/>
+
                 </div>
               ))}
             </div>
@@ -332,11 +337,14 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
             {/* Mobile Carousel View */}
             <div className="md:hidden relative">
               <div className="relative aspect-square overflow-hidden rounded-lg">
-                <img
-                  src={product.carouselImages[currentCarousel1]}
-                  alt={`${product.name} view`}
-                  className="w-full h-full object-cover"
-                />
+               <Image
+  src={product.carouselImages[currentCarousel1].trim()} // trim spaces if any
+  alt={`${product.name} view`}
+  width={1200}    // approximate width for your banner
+  height={500}    // approximate height for your banner
+  className="w-full h-full object-cover"
+  priority        // high-priority loading for above-the-fold content
+/>
               </div>
               <button
                 onClick={prevSlide1}
@@ -370,11 +378,14 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
       {/* SECTION 4: Full Width Carousel */}
       {product.carouselImagestwo && product.carouselImagestwo.length > 0 && (
         <section ref={fullCarouselRef} className="relative h-[25vh] lg:h-[80vh] md:h-[80vh] overflow-hidden">
-          <img
-            src={product.carouselImagestwo[currentFullCarousel]}
-            alt={`${product.name} showcase`}
-            className="w-full h-[200px] lg:h-full object-cover"
-          />
+         <Image
+  src={product.carouselImagestwo[currentFullCarousel].trim()} // trim spaces if any
+  alt={`${product.name} showcase`}
+  width={1200}      // approximate width matching your layout
+  height={200}      // matches h-[200px]; adjust for lg:h-full if needed
+  className="w-full h-[200px] lg:h-full object-cover"
+  loading="lazy"    // lazy load for faster page load
+/>
           <div className="absolute inset-0 bg-black/20" />
           <button
             onClick={prevFullSlide}
@@ -411,11 +422,14 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
           <div className="container mx-auto px-4 lg:px-8">
             <div className="max-w-4xl mx-auto text-center phone-type-content">
               <div className="relative aspect-video mb-8 rounded-2xl overflow-hidden">
-                <img
-                  src={product.phoneType.typeImage}
-                  alt={product.phoneType.heading}
-                  className="w-full h-[150px] lg:h-[400px] object-cover"
-                />
+               <Image
+  src={product.phoneType.typeImage.trim()} // remove any trailing spaces
+  alt={product.phoneType.heading}
+  width={800}        // approximate width; adjust to match your layout
+  height={400}       // matches h-[150px] on small screens and lg:h-[400px]
+  className="w-full h-[150px] lg:h-[400px] object-cover"
+  loading="lazy"     // lazy load for faster page load
+/>
               </div>
               <h2 className="text-3xl md:text-5xl font-bold mb-6 text-[#8FC240]">{product.phoneType.heading}</h2>
               <p className="text-xl text-muted-foreground leading-relaxed" style={{ fontSize: '20px' }}>
@@ -432,11 +446,14 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
               <div className="feature-image relative aspect-square overflow-hidden rounded-2xl">
-                <img
-                  src={product.featureImage.image}
-                  alt="Feature"
-                  className="w-full h-full object-cover"
-                />
+               <Image
+  src={product.featureImage.image.trim()} // remove trailing spaces
+  alt="Feature"
+  width={800}       // approximate width; adjust to fit layout
+  height={600}      // approximate height
+  className="w-full h-full object-cover"
+  loading="lazy"    // lazy load for faster page load
+/>
               </div>
               <div className="space-y-6 feature-text">
                 <h2 className="text-3xl md:text-4xl font-bold text-[#8FC240]">{product.name}</h2>
@@ -495,11 +512,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ produc
               {product.imageExplanations.map((item: any, index: number) => (
                 <Card key={index} className="explanation-card overflow-hidden hover:shadow-xl transition-all border-2" style={{ borderColor: '#8FC240' + '33' }}>
                   <div className="relative aspect-video overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                    />
+                   <Image
+  src={item.image.trim()} // remove any trailing spaces
+  alt={item.title}
+  width={400}             // adjust to match layout
+  height={400}            // adjust height as needed
+  className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+  loading="lazy"          // lazy load for faster page load
+  priority={false}        // set to true only if this image must load immediately
+/>
                   </div>
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-3 text-[#8FC240]">{item.title}</h3>

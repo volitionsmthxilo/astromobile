@@ -409,8 +409,8 @@ export const productsDatabase = {
   
   tablets: [
     {
-      id: "astro-tab-pro",
-      name: "Astro Tab Pro",
+      id: "astro-funbook-a1",
+      name: "Astro Funbook A1",
       tagline: "Professional tablet for work and play",
       image: "/tablets/tab-pro.jpg",
       price: "399",
@@ -542,8 +542,8 @@ export const productsDatabase = {
     },
     
     {
-      id: "astro-tab-lite",
-      name: "Astro Tab Lite",
+      id: "astro-funbook-a2",
+      name: "Astro Funbook A2",
       tagline: "Affordable tablet for everyday use",
       image: "/tablets/tab-lite.jpg",
       price: "199",
