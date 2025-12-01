@@ -85,7 +85,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-semibold text-lg">Call Us</h3>
                 <p className="text-sm text-muted-foreground">Mon-Fri 8am-6pm</p>
-                <p className="font-semibold">+263 123 456 789</p>
+                <p className="font-semibold">+263 78555004</p>
               </CardContent>
             </Card>
             <Card className="border-2 hover:shadow-xl transition-all animate-in" style={{ borderColor: '#8FC240' + '33' }}>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-semibold text-lg">Email Us</h3>
                 <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
-                <p className="font-semibold">info@astromobile.com</p>
+                <p className="font-semibold">busiinessdevelopment@algebra.africa</p>
               </CardContent>
             </Card>
             <Card className="border-2 hover:shadow-xl transition-all animate-in" style={{ borderColor: '#8FC240' + '33' }}>
@@ -225,8 +225,8 @@ export default function ContactPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { country: "Zimbabwe", city: "Harare", phone: "+263 123 456 789" },
-              { country: "Kenya", city: "Nairobi", phone: "+254 123 456 789" },
+              { country: "Zimbabwe", city: "Harare", phone: "+263 78555004" },
+              { country: "Kenya", city: "Nairobi", phone: "+254-701-561-809" },
               { country: "Malawi", city: "Lilongwe", phone: "+265 123 456 789" },
               { country: "South Africa", city: "Johannesburg", phone: "+27 123 456 789" },
             ].map((office, i) => (
