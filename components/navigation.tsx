@@ -120,13 +120,7 @@ export function Navigation() {
               Company
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#8FC240] transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <Link
-              href="/investors"
-              className="nav-link text-sm font-medium hover:text-[#8FC240] transition-all duration-300 relative group"
-            >
-              Investors
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#8FC240] transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            
           </div>
 
           {/* Desktop CTA Buttons */}
@@ -199,13 +193,8 @@ export function Navigation() {
               >
                 Companies
               </Link>
-              <Link
-                href="/investors"
-                className="text-sm font-medium hover:text-[#8FC240] transition-all duration-300 py-2 px-4 rounded-lg hover:bg-[#8FC240]/10"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Investors
-              </Link>
+            
+             
               <div className="flex flex-col gap-2 pt-2">
                 <Link href="/distributor">
                   <Button
