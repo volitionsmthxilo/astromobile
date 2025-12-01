@@ -1018,7 +1018,7 @@ export const productsDatabase = {
       image: "/PULSE_SINGLE_4.jpg",
       img: "/logo3.png",
       price: "90",
-      bannerImage: "/PULSE_SINGLE_4.jpg",
+      bannerImage: "/pexels-mareklevak-2265486.jpg",
       
       carouselImages: [
         "/PULSE_SINGLE_4.jpg",
@@ -1029,8 +1029,8 @@ export const productsDatabase = {
       
       carouselImagestwo: [
         "/fitness-tracker-sport-bracelet-smartwatch-technology.jpg",
-        "/61vge4+-08L-removebg-preview.png",
-        "/woman-using-holography-from-smartwatch-wearable-technology.jpg",
+        "/548 detail 8.jpg",
+        "/close-up-woman-exercising-after-online-instructor.jpg",
         "/PULSE_SINGLE_2.jpg",
       ],
       
