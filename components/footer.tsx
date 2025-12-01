@@ -19,12 +19,12 @@ export function Footer() {
               Smartphones built for Africa — affordable, durable, connected.
             </p>
             <div className="flex items-center gap-3">
-              <Link
-                href="#"
-                className="w-9 h-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <Facebook className="w-4 h-4" />
-              </Link>
+               <Link
+    href="https://www.facebook.com/search/top?q=astromobileafrica"
+    className="w-9 h-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+  >
+    <Facebook className="w-4 h-4" />
+  </Link>
               <Link
                 href="#"
                 className="w-9 h-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
