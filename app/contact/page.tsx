@@ -18,10 +18,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function ContactPage() {
   const scrollRef = useRef(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
 
-  // -----------------------------
-  // FORM STATE (added)
-  // -----------------------------
+  // Form state
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -35,38 +35,88 @@ export default function ContactPage() {
     setForm({ ...form, [e.target.id]: e.target.value })
   }
 
-  // -----------------------------
-  // HANDLE EMAIL SENDING (added)
-  // -----------------------------
-  const handleSubmit = (e) => {
+  // Handle email sending
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus(null)
 
-    const mailtoLink = `mailto:businessdevelopment@algebra.africa
-?subject=${encodeURIComponent(form.subject)}
-&body=${encodeURIComponent(
-`Name: ${form.firstName} ${form.lastName}
-Email: ${form.email}
-Phone: ${form.phone}
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(form),
+      })
 
-Message:
-${form.message}`
-)}`
-
-    window.location.href = mailtoLink
+      if (response.ok) {
+        setSubmitStatus('success')
+        setForm({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: ""
+        })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
-  // Buttons for Support & Partnership
-  const supportMail = () => {
-    window.location.href = `mailto:businessdevelopment@algebra.africa?subject=Support Request`
+  // Support button
+  const supportMail = async () => {
+    setIsSubmitting(true)
+    try {
+      await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: "Support",
+          lastName: "Request",
+          email: "support@request.com",
+          phone: "",
+          subject: "Support Request",
+          message: "Support request submitted"
+        }),
+      })
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
-  const partnershipMail = () => {
-    window.location.href = `mailto:businessdevelopment@algebra.africa?subject=Partnership Inquiry`
+  // Partnership button
+  const partnershipMail = async () => {
+    setIsSubmitting(true)
+    try {
+      await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName: "Partnership",
+          lastName: "Inquiry",
+          email: "partnership@inquiry.com",
+          phone: "",
+          subject: "Partnership Inquiry",
+          message: "Partnership inquiry submitted"
+        }),
+      })
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
-  // -----------------------------
-  // GSAP ANIMATIONS (unchanged)
-  // -----------------------------
+  // GSAP animations
   useEffect(() => {
     const sections = scrollRef.current?.querySelectorAll('section')
     sections?.forEach((section) => {
@@ -162,47 +212,60 @@ ${form.message}`
                   <p className="text-muted-foreground">Fill out the form and we'll get back to you shortly</p>
                 </div>
 
-                <div className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="John" onChange={handleChange} />
+                      <Input id="firstName" placeholder="John" value={form.firstName} onChange={handleChange} required />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Doe" onChange={handleChange} />
+                      <Input id="lastName" placeholder="Doe" value={form.lastName} onChange={handleChange} required />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="john@example.com" onChange={handleChange} />
+                    <Input id="email" type="email" placeholder="john@example.com" value={form.email} onChange={handleChange} required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
-                    <Input id="phone" type="tel" placeholder="+263 123 456 789" onChange={handleChange} />
+                    <Input id="phone" type="tel" placeholder="+263 123 456 789" value={form.phone} onChange={handleChange} />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" placeholder="How can we help?" onChange={handleChange} />
+                    <Input id="subject" placeholder="How can we help?" value={form.subject} onChange={handleChange} required />
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Message</Label>
-                    <Textarea id="message" placeholder="Tell us more about your inquiry..." rows={5} onChange={handleChange} />
+                    <Textarea id="message" placeholder="Tell us more about your inquiry..." rows={5} value={form.message} onChange={handleChange} required />
                   </div>
 
+                  {submitStatus === 'success' && (
+                    <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                      Message sent successfully! We'll get back to you soon.
+                    </div>
+                  )}
+
+                  {submitStatus === 'error' && (
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                      Failed to send message. Please try again.
+                    </div>
+                  )}
+
                   <Button
+                    type="submit"
                     size="lg"
                     className="w-full"
                     style={{ backgroundColor: '#8FC240' }}
-                    onClick={handleSubmit}
+                    disabled={isSubmitting}
                   >
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
-                </div>
+                </form>
               </CardContent>
             </Card>
 
@@ -219,7 +282,7 @@ ${form.message}`
                       <p className="text-muted-foreground leading-relaxed mb-4">
                         Need help with your device or PAYU payments? Our support team is ready to assist you.
                       </p>
-                      <Button variant="outline" onClick={supportMail}>Contact Support</Button>
+                      <Button variant="outline" onClick={supportMail} disabled={isSubmitting}>Contact Support</Button>
                     </div>
                   </div>
                 </CardContent>
@@ -236,7 +299,7 @@ ${form.message}`
                       <p className="text-muted-foreground leading-relaxed mb-4">
                         Interested in becoming a partner? Let's discuss how we can work together.
                       </p>
-                      <Button variant="outline" onClick={partnershipMail}>Partnership Team</Button>
+                      <Button variant="outline" onClick={partnershipMail} disabled={isSubmitting}>Partnership Team</Button>
                     </div>
                   </div>
                 </CardContent>
@@ -325,7 +388,11 @@ ${form.message}`
 
 
 
+
+
 // "use client"
+
+// // re_RxGtBL5f_JcDBkMs1EpHmoxm5SgqjFy4j
 
 // import { Navigation } from "@/components/navigation"
 // import { Footer } from "@/components/footer"
@@ -336,7 +403,7 @@ ${form.message}`
 // import { Textarea } from "@/components/ui/textarea"
 // import { Label } from "@/components/ui/label"
 // import { Mail, Phone, MapPin, Clock, MessageSquare, Headphones } from "lucide-react"
-// import { useEffect, useRef } from "react"
+// import { useEffect, useRef, useState } from "react"
 // import ThreeBackground from "@/components/ThreeBackground"
 // import { gsap } from "gsap"
 // import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -346,8 +413,55 @@ ${form.message}`
 // export default function ContactPage() {
 //   const scrollRef = useRef(null)
 
+//   // -----------------------------
+//   // FORM STATE (added)
+//   // -----------------------------
+//   const [form, setForm] = useState({
+//     firstName: "",
+//     lastName: "",
+//     email: "",
+//     phone: "",
+//     subject: "",
+//     message: ""
+//   })
+
+//   const handleChange = (e) => {
+//     setForm({ ...form, [e.target.id]: e.target.value })
+//   }
+
+//   // -----------------------------
+//   // HANDLE EMAIL SENDING (added)
+//   // -----------------------------
+//   const handleSubmit = (e) => {
+//     e.preventDefault()
+
+//     const mailtoLink = `mailto:businessdevelopment@algebra.africa
+// ?subject=${encodeURIComponent(form.subject)}
+// &body=${encodeURIComponent(
+// `Name: ${form.firstName} ${form.lastName}
+// Email: ${form.email}
+// Phone: ${form.phone}
+
+// Message:
+// ${form.message}`
+// )}`
+
+//     window.location.href = mailtoLink
+//   }
+
+//   // Buttons for Support & Partnership
+//   const supportMail = () => {
+//     window.location.href = `mailto:businessdevelopment@algebra.africa?subject=Support Request`
+//   }
+
+//   const partnershipMail = () => {
+//     window.location.href = `mailto:businessdevelopment@algebra.africa?subject=Partnership Inquiry`
+//   }
+
+//   // -----------------------------
+//   // GSAP ANIMATIONS (unchanged)
+//   // -----------------------------
 //   useEffect(() => {
-//     // Animate sections on scroll
 //     const sections = scrollRef.current?.querySelectorAll('section')
 //     sections?.forEach((section) => {
 //       gsap.fromTo(
@@ -372,12 +486,6 @@ ${form.message}`
 //       ScrollTrigger.getAll().forEach(trigger => trigger.kill())
 //     }
 //   }, [])
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault()
-//     // Handle form submission
-//     console.log('Form submitted')
-//   }
 
 //   return (
 //     <div className="min-h-screen relative" ref={scrollRef}>
@@ -415,6 +523,7 @@ ${form.message}`
 //                 <p className="font-semibold">+263 78555004</p>
 //               </CardContent>
 //             </Card>
+
 //             <Card className="border-2 hover:shadow-xl transition-all animate-in" style={{ borderColor: '#8FC240' + '33' }}>
 //               <CardContent className="pt-6 space-y-4 text-center">
 //                 <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mx-auto">
@@ -425,6 +534,7 @@ ${form.message}`
 //                 <p className="font-semibold">businessdevelopment@algebra.africa</p>
 //               </CardContent>
 //             </Card>
+
 //             <Card className="border-2 hover:shadow-xl transition-all animate-in" style={{ borderColor: '#8FC240' + '33' }}>
 //               <CardContent className="pt-6 space-y-4 text-center">
 //                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto" style={{ backgroundColor: '#8FC240' + '1A' }}>
@@ -437,43 +547,53 @@ ${form.message}`
 //             </Card>
 //           </div>
 
-//           {/* Contact Form & Info */}
+//           {/* Contact Form */}
 //           <div className="grid lg:grid-cols-2 gap-12">
-//             {/* Form */}
 //             <Card className="border-2 animate-in" style={{ borderColor: '#8FC240' + '33' }}>
 //               <CardContent className="p-8 space-y-6">
 //                 <div>
 //                   <h2 className="text-2xl md:text-3xl font-bold mb-2">Send Us a Message</h2>
 //                   <p className="text-muted-foreground">Fill out the form and we'll get back to you shortly</p>
 //                 </div>
+
 //                 <div className="space-y-6">
 //                   <div className="grid sm:grid-cols-2 gap-4">
 //                     <div className="space-y-2">
 //                       <Label htmlFor="firstName">First Name</Label>
-//                       <Input id="firstName" placeholder="John" />
+//                       <Input id="firstName" placeholder="John" onChange={handleChange} />
 //                     </div>
 //                     <div className="space-y-2">
 //                       <Label htmlFor="lastName">Last Name</Label>
-//                       <Input id="lastName" placeholder="Doe" />
+//                       <Input id="lastName" placeholder="Doe" onChange={handleChange} />
 //                     </div>
 //                   </div>
+
 //                   <div className="space-y-2">
 //                     <Label htmlFor="email">Email</Label>
-//                     <Input id="email" type="email" placeholder="john@example.com" />
+//                     <Input id="email" type="email" placeholder="john@example.com" onChange={handleChange} />
 //                   </div>
+
 //                   <div className="space-y-2">
 //                     <Label htmlFor="phone">Phone Number</Label>
-//                     <Input id="phone" type="tel" placeholder="+263 123 456 789" />
+//                     <Input id="phone" type="tel" placeholder="+263 123 456 789" onChange={handleChange} />
 //                   </div>
+
 //                   <div className="space-y-2">
 //                     <Label htmlFor="subject">Subject</Label>
-//                     <Input id="subject" placeholder="How can we help?" />
+//                     <Input id="subject" placeholder="How can we help?" onChange={handleChange} />
 //                   </div>
+
 //                   <div className="space-y-2">
 //                     <Label htmlFor="message">Message</Label>
-//                     <Textarea id="message" placeholder="Tell us more about your inquiry..." rows={5} />
+//                     <Textarea id="message" placeholder="Tell us more about your inquiry..." rows={5} onChange={handleChange} />
 //                   </div>
-//                   <Button size="lg" className="w-full" style={{ backgroundColor: '#8FC240' }} onClick={handleSubmit}>
+
+//                   <Button
+//                     size="lg"
+//                     className="w-full"
+//                     style={{ backgroundColor: '#8FC240' }}
+//                     onClick={handleSubmit}
+//                   >
 //                     Send Message
 //                   </Button>
 //                 </div>
@@ -493,7 +613,7 @@ ${form.message}`
 //                       <p className="text-muted-foreground leading-relaxed mb-4">
 //                         Need help with your device or PAYU payments? Our support team is ready to assist you.
 //                       </p>
-//                       <Button variant="outline">Contact Support</Button>
+//                       <Button variant="outline" onClick={supportMail}>Contact Support</Button>
 //                     </div>
 //                   </div>
 //                 </CardContent>
@@ -510,7 +630,7 @@ ${form.message}`
 //                       <p className="text-muted-foreground leading-relaxed mb-4">
 //                         Interested in becoming a partner? Let's discuss how we can work together.
 //                       </p>
-//                       <Button variant="outline">Partnership Team</Button>
+//                       <Button variant="outline" onClick={partnershipMail}>Partnership Team</Button>
 //                     </div>
 //                   </div>
 //                 </CardContent>
@@ -581,6 +701,9 @@ ${form.message}`
 //     </div>
 //   )
 // }
+
+
+
 
 
 
